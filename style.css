@@ -60,6 +60,51 @@ html {
 .left-side .profile {
   flex: 4;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.left-side .image {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin: 1em 0 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-side .image .circle-1, .left-side .image .circle-2 {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #beb6ab transparent #beb6ab #beb6ab;
+  transition: all 1s ease;
+  position: absolute;
+}
+.left-side .image .circle-2 {
+  width: 107px;
+  height: 107px;
+  border-color: #beb6ab #beb6ab #beb6ab transparent;
+}
+.left-side .image .profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: all 1s ease;
+  display: block;
+  cursor: pointer;
+  z-index: 10;
+}
+.left-side .image:hover {
+  cursor: pointer;
+}
+.left-side .image:hover .circle-1, .left-side .image:hover .circle-2 {
+  transform: rotate(360deg);
+}
+.left-side .image:hover .circle-2 {
+  transform: rotate(-360deg);
 }
 .left-side .buttons {
   flex: 3;
@@ -105,16 +150,11 @@ html {
   cursor: pointer;
   transition: all 0.5s ease;
 }
+.right-side .stats:nth-child(2) {
+  margin: 1px 0 1px 0;
+}
 .right-side .stats:hover {
   background-color: #beb6ab;
-}
-
-.right-side > :last-child {
-  margin-top: 1px;
-}
-
-.right-side > :first-child {
-  margin-bottom: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
